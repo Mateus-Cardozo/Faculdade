@@ -1,0 +1,200 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Variáveis globais de cores */
+:root {
+    --primario: #4f46e5;
+    --segundario: #7c3aed;
+    --escuro: #0f172a;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+    --transparente: rgba(15, 23, 42, 1);
+}
+
+/* scroll do mouse mais fluido*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Configurações gerais */
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+/* Navegação */
+.navegation {
+    position: fixed;
+    top: 0;
+    background: var(--transparente);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 0;
+}
+
+.Menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.MenuLink {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.MenuLink::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+    background: linear-gradient(90deg, var(--primario), var(--segundario));
+}
+
+.MenuLink:hover::after {
+    width: 100%;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--primario);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.SubTitulo {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+/* Seções principais */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Estilos para os títulos */
+.TituloSobre, .TituloFormacao, .TituloPortifolio, .TituloContato {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primario);
+    margin-bottom: 20px;
+}
+
+/* Estilos para os parágrafos */
+.ParagrafoSobre, .ParagrafoFormacao, .ParagrafoContato {
+    font-size: 1.2rem;
+    color: var(--claro);
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção Formação */
+.ParagrafoFormacao {
+    text-align: left;
+}
+
+.ParagrafoFormacao ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilos do link do GitHub */
+.github-link {
+    display: inline-block;
+    margin-top: 20px; 
+    padding: 12px 24px;
+    background-color: var(--primario);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    background-color: var(--segundario);
+}
+
+/* Formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--claro);
+    background: var(--vidro);
+    color: var(--claro);
+}
+
+button {
+    background-color: var(--primario);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--segundario);
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--claro);
+    color: var(--escuro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: var(--primario);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    background: var(--segundario);
+}

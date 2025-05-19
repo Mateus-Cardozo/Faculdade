@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio RU: 4740202</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- menu de cima -->
+    <nav class="navegation"> 
+        <ul class="Menu">
+            <li><a href="#inicio" class="MenuLink">Início</a></li>
+            <li><a href="#Sobre" class="MenuLink">Sobre mim</a></li>
+            <li><a href="#Formacao" class="MenuLink">Formação</a></li>
+            <li><a href="#Portfolio" class="MenuLink">Portfólio</a></li>
+            <li><a href="#Contato" class="MenuLink">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- inicio -->
+    <main id="inicio" class="cabecalho">
+        <h1>Mateus Ferreira Cardozo</h1>
+        <p class="SubTitulo">Universitário de Engenharia de Software</p>
+    </main>
+    
+ <!-- sobre -->
+    <section id="Sobre" class="Sobre">
+        <h2 class="TituloSobre">Sobre Mim</h2>
+        <div class="CaixaSobre">
+            <p class="ParagrafoSobre">Desde de pequeno sempre tive contato com o computador e mesmo depois de velho sinto uma paixao enorme em jogar, programação e finanças. Prefiro salgados a doces e passo grande parte do tempo estudando e jogando.</p>
+        </div>
+    </section>
+
+ <!-- formacao -->
+    <section id="Formacao" class="Formacao">
+        <h2 class="TituloFormacao">Formação</h2>
+        <div class="CaixaFormacao">
+            <ul class="ParagrafoFormacao">
+                <li>Estudante de Engenharia de Software</li>
+                <li>Tecnico de Informatico</li>
+                <li>Ensino Médio Completo</li>
+                <li>Curso de Ingles</li>
+                <li>Curso de Design</li>
+                <li>Curso de Pacote Office</li>
+            </ul>
+        </div>
+    </section>
+ <!-- portfolio -->
+    <section id="Portfolio" class="Portfolio">
+        <h2 class="TituloPortifolio">Meu Portfólio</h2>
+        <p class="ParagrafoPortifolio">Confira meus projetos e trabalhos desenvolvidos diretamente no meu GitHub!</p>
+        <a href="https://github.com/Mateus-Cardozo" class="github-link" target="_blank">Acessar meu GitHub</a>
+    </section>
+
+     <!-- contato -->
+    <section id="Contato" class="Contato">
+        <h2 class="TituloContato">Contato</h2>
+        <p class="ParagrafoContato">Entre em contato comigo preenchendo o formulário abaixo:</p>
+        <form id="formContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+         <!-- Popup de confirmação -->
+        <div id="popup" class="popup">
+            <p>Mensagem enviada com sucesso!</p>
+            <button onclick="fecharPopup()">Fechar</button>
+        </div>
+    </section>
+
+    <!-- inclusao do js -->
+    <script src="confirmacao.js"></script>
+
+</body>
+</html>
